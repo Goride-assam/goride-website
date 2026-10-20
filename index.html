@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoRide - Your ride, your way</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
-        header { background-color: #FFD700; padding: 20px; text-align: center; }
-        h1 { margin: 0; font-size: 2.5em; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #333; }
-        p { line-height: 1.6; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; text-align: center; }
+        header { background-color: #FFD700; padding: 40px 20px; }
+        h1 { margin: 0; font-size: 3em; color: #333; }
+        p { font-size: 1.2em; color: #555; }
+        .container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .download-btn {
+            display: inline-block; background-color: #FFD700; color: #333; 
+            padding: 15px 30px; font-size: 1.2em; font-weight: bold; 
+            text-decoration: none; border-radius: 8px; margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+        .download-btn:hover { background-color: #e6c200; transform: translateY(-2px); }
         .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; margin-top: 40px; border-top: 1px solid #ddd; }
+        .footer a { color: #333; text-decoration: none; margin: 0 10px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -20,17 +27,17 @@
         <p>Your ride, your way 🚲</p>
     </header>
     <div class="container">
-        <h2>Welcome to GoRide</h2>
-        <p>GoRide is your reliable partner for quick and safe rides. Book a ride through our app and enjoy a seamless experience.</p>
+        <h2>Welcome to GoRide!</h2>
+        <p>Book a quick and reliable ride with GoRide. Download our app now and get started.</p>
         
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need support, feel free to reach out to us.</p>
-        <ul>
-            <li><strong>Email:</strong> support@goride.com</li>
-            <li><strong>Phone:</strong> +91-9999999999</li>
-        </ul>
+        <!-- यहाँ APK का डाउनलोड लिंक डालना है -->
+        <a href="अपना_गूगल_ड्राइव_लिंक_यहाँ_डालें" class="download-btn">⬇️ Download GoRide App</a>
+        
+        <p style="margin-top: 20px;"><strong>Contact Us:</strong><br>support@goride.com</p>
     </div>
     <div class="footer">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms & Conditions</a>
         <p>© 2026 GoRide. All rights reserved.</p>
     </div>
 </body>
