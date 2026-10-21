@@ -3,42 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoRide - Your ride, your way</title>
+    <title>GoRide - Diwali Offer</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; text-align: center; }
-        header { background-color: #FFD700; padding: 40px 20px; }
-        h1 { margin: 0; font-size: 3em; color: #333; }
-        p { font-size: 1.2em; color: #555; }
-        .container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .download-btn {
-            display: inline-block; background-color: #FFD700; color: #333; 
-            padding: 15px 30px; font-size: 1.2em; font-weight: bold; 
-            text-decoration: none; border-radius: 8px; margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;
-        }
-        .download-btn:hover { background-color: #e6c200; transform: translateY(-2px); }
-        .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; margin-top: 40px; border-top: 1px solid #ddd; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #FFF8E1; color: #333; text-align: center; overflow-x: hidden; }
+        
+        /* Background Logo Watermark (Bike) */
+        .bg-logo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 25em; opacity: 0.04; z-index: -1; pointer-events: none; }
+
+        /* Animated Diwali Banner */
+        .banner { background: linear-gradient(135deg, #FFD700, #FF8C00); padding: 40px 20px; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .banner h1 { margin: 0; font-size: 3em; color: #222; z-index: 2; position: relative; text-shadow: 2px 2px 4px rgba(255,255,255,0.5); }
+        .banner p { font-size: 1.2em; color: #444; z-index: 2; position: relative; font-weight: bold; }
+        
+        /* Floating Diyas & Fireworks */
+        .floating-icon { position: absolute; font-size: 2.5em; animation: float 4s ease-in-out infinite; z-index: 1; }
+        .diya1 { top: 10px; left: 10%; animation-delay: 0s; }
+        .diya2 { bottom: 10px; right: 15%; animation-delay: 1s; }
+        .diya3 { top: 20px; right: 10%; animation-delay: 2s; }
+        .rocket1 { top: 30px; left: 20%; animation: zoom 3s infinite; }
+        .rocket2 { bottom: 20px; right: 30%; animation: zoom 3s infinite 1.5s; }
+
+        @keyframes float { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } 100% { transform: translateY(0px) rotate(0deg); } }
+        @keyframes zoom { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.7; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Offers Section */
+        .container { max-width: 600px; margin: -30px auto 30px auto; padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 2; }
+        
+        .offer-box { background: #FFF3E0; border: 2px dashed #FF8C00; border-radius: 12px; padding: 20px; margin-bottom: 25px; animation: pulse 2s infinite; position: relative; }
+        .offer-box h2 { margin: 0 0 10px 0; color: #E65100; font-size: 1.8em; }
+        .offer-box p { font-size: 1.1em; color: #555; margin: 5px 0; }
+        .offer-code { background: #FF8C00; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; display: inline-block; margin-top: 10px; font-size: 1.2em; letter-spacing: 2px; }
+        
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(255, 140, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0); } }
+
+        /* Download Button */
+        .download-btn { display: inline-block; background: linear-gradient(45deg, #FFD700, #FFA500); color: #222; padding: 18px 40px; font-size: 1.3em; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4); transition: 0.3s; margin-top: 10px; }
+        .download-btn:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(255, 165, 0, 0.6); }
+
+        /* Footer */
+        .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; margin-top: 20px; border-top: 1px solid #ddd; position: relative; z-index: 2; }
         .footer a { color: #333; text-decoration: none; margin: 0 10px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header>
+
+    <!-- Background Logo (Bike) -->
+    <div class="bg-logo">🏍️</div>
+
+    <!-- Animated Diwali Banner -->
+    <div class="banner">
+        <div class="floating-icon diya1">🪔</div>
+        <div class="floating-icon diya2">🪔</div>
+        <div class="floating-icon diya3">🪔</div>
+        <div class="floating-icon rocket1">🎆</div>
+        <div class="floating-icon rocket2">🎇</div>
         <h1>GoRide</h1>
-        <p>Your ride, your way 🚲</p>
-    </header>
-    <div class="container">
-        <h2>Welcome to GoRide!</h2>
-        <p>Book a quick and reliable ride with GoRide. Download our app now and get started.</p>
-        
-        <!-- यहाँ APK का डाउनलोड लिंक डालना है -->
-        <a href="https://1drv.ms/u/c/4823358d1f8f60c4/IQCFlWMZT83bSoYjm54uYnnaATrRbSp2tawQfb3iSuWx_9g" class="download-btn">⬇️ Download GoRide App</a>
-        
-        <p style="margin-top: 20px;"><strong>Contact Us:</strong><br>support@goride.com</p>
+        <p>Your ride, your way 🏍️🛺</p>
     </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- First Ride Offer -->
+        <div class="offer-box">
+            <h2>✨ दिवाली धमाका ऑफर ✨</h2>
+            <p>पहली राइड पर पाएं <strong>₹50 की सीधी छूट!</strong></p>
+            <p>सिर्फ नए यूज़र्स के लिए।</p>
+            <div class="offer-code">FIRST50</div>
+        </div>
+
+        <h2>Book a Ride Today</h2>
+        <p>GoRide is your reliable partner for quick and safe rides. Book a bike or auto through our app and enjoy a seamless experience.</p>
+        
+        <!-- Download Button -->
+        <a href="https://1drv.ms/u/c/4823358d1f8f60c4/IQCFlWMZT83bSoYjm54uYnnaATrRbSp2tawQfb3iSuWx_9g" class="download-btn">⬇️ Download GoRide App</a>
+        <p style="margin-top: 25px;"><strong>Contact Us:</strong><br>support@goride.com</p>
+    </div>
+
     <div class="footer">
         <a href="privacy.html">Privacy Policy</a> | 
         <a href="terms.html">Terms & Conditions</a>
         <p>© 2026 GoRide. All rights reserved.</p>
     </div>
+
 </body>
 </html>
